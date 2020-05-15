@@ -1,2 +1,220 @@
-:root{--yellow:#ffc600;--black:#272727}html{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif}@media screen and (min-width:320px){html{font-size:calc(14px + 6 * ((100vw - 320px) / 680))}}@media screen and (min-width:1000px){html{font-size:20px}}body{background-image:url("../img/topography.svg"),linear-gradient(180deg,#F27121,#E94057,#b130ac);background-size:340px,auto;min-height:calc(100vh - 100px);margin:50px;background-attachment:fixed;letter-spacing:-1px}.fun-hover{background:-webkit-linear-gradient(right,rgb(51,221,96) 50%,rgba(165,201,86,0) 50%);background-size:200%;transition:0.4s}.fun-hover:hover{background-position:-100%}.coolTitle{text-align:center;font-size:40px;transform:skewy(-10deg);letter-spacing:4px;word-spacing:-8px;color:tomato;text-shadow:-1px -1px 0 firebrick,-2px -2px 0 firebrick,-3px -3px 0 firebrick,-4px -4px 0 firebrick,-5px -5px 0 firebrick,-6px -6px 0 firebrick,-7px -7px 0 firebrick,-8px -8px 0 firebrick,-30px 20px 40px dimgrey}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: Product Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.6rem;
+  background-color: #f1f1f1;
+  color: #303030;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+.wrapper {
+  padding: 0 4em;
+}
+
+header {
+  background-color: #19cad6;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar li {
+  padding: 1.2em;
+}
+.navbar li:hover {
+  color: #f1f1f1;
+  transition-duration: 250ms;
+}
+
+.hero {
+  background-color: #19cad6;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.hero p {
+  font-size: 1.2em;
+}
+
+.btn-secondary, .btn-primary {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 6px 18px;
+  margin: 3px;
+  box-shadow: 0px 2px 6px #00000021;
+}
+.btn-secondary:hover, .btn-primary:hover {
+  transform: scale(0.98);
+}
+.btn-secondary:active, .btn-primary:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #23d9e5;
+}
+
+.btn-secondary {
+  background-color: #303030;
+}
+
+footer {
+  background-color: #303030;
+  color: #f1f1f1;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.mx-1 {
+  margin: 0rem 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.px-1 {
+  padding: 0rem 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.mx-2 {
+  margin: 0rem 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.px-2 {
+  padding: 0rem 2rem;
+}
+
+.py-2 {
+  padding: 2rem 0rem;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.mx-3 {
+  margin: 0rem 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.px-3 {
+  padding: 0rem 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0rem;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.mx-4 {
+  margin: 0rem 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.px-4 {
+  padding: 0rem 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0rem;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.mx-5 {
+  margin: 0rem 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.px-5 {
+  padding: 0rem 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0rem;
+}
+
 /*# sourceMappingURL=style.css.map */

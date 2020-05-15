@@ -1,0 +1,156 @@
+//Learning SASS Last Updated 24/04/2020 by Sahil Ahmed
+// run sass --watch assets/scss/style.scss assets/css/style.css
+
+// ? Imports
+// * Style Variables
+// fonts
+$sansfont-stack: Product Sans, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$monofont-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+
+// Color
+$primary-color: #19cad6;
+$secondary-color: #303030;
+$bg-color: #f1f1f1;
+$font-color: #303030;
+
+//functions
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #f1f1f1;
+  }
+}
+
+// Set BG and text Color Mixin
+@mixin set-bg($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// Normalize CSS
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: $sansfont-stack;
+  line-height: 1.6rem;
+  background-color: $bg-color;
+  color: $font-color;
+}
+
+// Media Queries
+a {
+  color: inherit;
+  text-decoration: none;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (max-width: 700px) {
+}
+// Main
+.wrapper {
+  padding: 0 4em;
+}
+header {
+  background-color: $primary-color;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  li {
+    padding: 1.2em;
+    &:hover {
+      color: $bg-color;
+      transition-duration: 250ms;
+    }
+  }
+}
+
+.hero {
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+
+%btn {
+  color: $bg-color;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 6px 18px;
+  margin: 3px;
+  box-shadow: 0px 2px 6px #00000021;
+  &:hover {
+    transform: scale(0.98);
+  }
+  &:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+}
+.btn-primary {
+  background-color: lighten($primary-color, 5%);
+  @extend %btn;
+}
+.btn-secondary {
+  background-color: $secondary-color;
+  @extend %btn;
+}
+footer {
+  background-color: $secondary-color;
+  color: $bg-color;
+}
+
+// * loop for margin and padding
+$spaceamounts: (1, 2, 3, 4, 5);
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .mx-#{$space} {
+    margin: 0rem #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0rem;
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .px-#{$space} {
+    padding: 0rem #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0rem;
+  }
+}
